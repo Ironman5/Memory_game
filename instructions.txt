@@ -1,0 +1,14 @@
+
+Pelin kuvaus:
+Ohjelma toteuttaa muistipelin graafisella käyttöliittymällä. Pelissä on käyttäjän valittavissa oleva määrä hedelmiä/kortteja (2-36) ja pelaajia (1-4).Peli käynnistetään play-painikkeella, jonka jälkeen vuorossa oleva pelaaja arvaa kaksi kortti pelikentältä. Jos pelaaja sai parit, kortit poistetaan pelilaudalta, pelaajan pistesaldoa kasvatetaan ja hän saa uuden vuoron. Jos pelaaja ei saanut pareja, kortit käännetään takaisin piiloon ja vuoro siirtyy seuraavalle pelaajalle. Peli päättyy, kun kaikki parit on löydetty, ja pelilauta on tyhjä. Lopuksi tulostetaan pelaajien löytämät parimäärät.
+
+Pelin toteutus:
+Peli on toteutettu QT:n dialog-widgettinä. Pelikenttä on jaettu kahteen osaan QGroupBoxeilla ja niissä on omat layotit, joihin komponentit on sijoiteltu. Korttien ja pelaajien määrän valinta on toteutettu QSpinBoxeilla ja hedelmät/kortit ovat QPushButtoneita. QRadioButtonit näyttävät kulloinkin vuorossa olevan pelaajan, mutta niillä ei voi vaihtaa pelaajaa. Alussa hedelmät/kortit ovat disabloituja ja spinboxit/radiobuttonit enabloituja. Play-painike käynnistää pelin ja kääntää em. määrittelyt päinvastaiseksi. Play-painikkeella pelin voi aloittaa uudelleen koska tahansa mutta peli on pelattava loppuun ennen kuin korttien/pelaajien määrää voi muuttaa. Close-painike sulkee pelin. Kortin takapuolella on kuva ja etupuolella hedelmät(aakkoset A-Z kommentoituna). Pelaaja-oliot on tallennettu Player-luokkaan ja hedelmät/kortit vektoreihin.
+
+Lisäosat:
+- Pelissä on vaihteleva määrä pelaajia, ja pelaajien määrä kysytään käyttäjältä.
+- Pelin päätyttyä (tai muutenkin) peliasetelman voi palauttaa alkutilanteeseen, jolloin käyttäjä voi aloittaa uuden pelin käynnistämättä ohjelmaa uudelleen.
+- Korttien taustapuolella on kuva 
+- Pelin aikana kerrotaan siihen mennessä kulunut aika.
+- Kirjainten sijasta korttien kuvapuolella on oikea kuva.
+
